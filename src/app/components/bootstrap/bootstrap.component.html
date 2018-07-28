@@ -1,0 +1,383 @@
+
+<div class="container" id="boots">
+	<div class="row">
+	   <div class="col-lg-12 col-md-12 text-center">	 
+	    <div *ngIf="id===1"  id="b_modal" [@moveInLeft]>
+			<h3 class="">Bootstrap modal</h3>
+			       <!-- buttons -->
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal1"> Modal with image</button>
+					<button type="button" class="btn btn-warning
+					 btn-lg" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Modal with text</button>
+					
+					<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal3" data-whatever="@getbootstrap">Modal with form</button>
+					<!-- buttons -->
+			 <!-- modal1 -->
+				<div class="modal fade modal-image bd-example-modal-lg" id="exampleModal1" tabindex="-1" role="dialog">
+				<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				
+				<div class="modal-body ">
+				<img src="../../../assets/images/back.jpg" class="img-fluid">
+				</div>
+				
+				</div>
+				</div>
+				</div>
+				<!-- modal1 -->
+
+
+				<!--modal 2  -->
+				<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title text-center" id="exampleModalLabel">New message</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+							<div class="modal-body">
+							<form>
+							<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Recipient:</label>
+							<input type="text" class="form-control" id="recipient-name">
+							</div>
+							<div class="form-group">
+							<label for="message-text" class="col-form-label">Message:</label>
+							<textarea class="form-control" id="message-text"></textarea>
+							</div>
+							</form>
+							</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send message</button>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- modal2 -->
+
+			<!-- Modal -->
+				<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title text-center" id="exampleModalLongTitle">Modal With text</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- modal 3 -->
+		</div>
+
+		<div *ngIf="id===2"  id="b_buttons" [@moveInDown]>
+			<h3 class="">Bootstrap Buttons</h3>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+					<h4 class="text-center">buttons</h4>
+					<button class="btn btn-primary">btn-primary</button>
+					<button class="btn btn-default">btn-default</button>
+					<button class="btn btn-danger">btn-danger</button>
+					<button class="btn btn-warning">btn-warning</button>
+					<button class="btn btn-secondary">btn-secondary</button>
+					<button class="btn btn-dark">btn-dark</button>
+					<button class="btn btn-light">btn-secondary</button>
+					
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+					<h4 class="text-center">buttons outline</h4>
+					<button class="btn btn-outline-primary">btn-primary</button>
+					<button class="btn btn-outline-success">btn-success</button>
+					<button class="btn btn-outline-danger">btn-danger</button>
+					<button class="btn btn-outline-warning">btn-warning</button>
+					<button class="btn btn-outline-secondary">btn-secondary</button>
+					<button class="btn btn-outline-dark">btn-dark</button>
+					<button class="btn btn-outline-light">btn-secondary</button>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+					<h4 class="text-center">buttons Block</h4>
+					<button class="btn btn-block btn-primary">btn-primary</button>
+					<button class="btn btn-block btn-default">btn-default</button>
+					<button class="btn btn-block btn-danger">btn-danger</button>
+					<button class="btn btn-block btn-warning">btn-warning</button>
+					<button class="btn btn-block btn-secondary">btn-secondary</button>
+					<button class="btn btn-block btn-dark">btn-dark</button>
+					<button class="btn btn-block btn-light">btn-secondary</button>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+					<h4 class="text-center">Larges Buttons</h4>
+					<button class="btn btn-lg btn-primary">btn-primary</button>
+					<button class="btn btn-lg btn-default">btn-default</button>
+					<button class="btn btn-lg btn-danger">btn-danger</button>
+					<button class="btn btn-lg btn-warning">btn-warning</button>
+					<button class="btn btn-lg btn-secondary">btn-secondary</button>
+					<button class="btn btn-lg btn-dark">btn-dark</button>
+					<button class="btn btn-lg btn-light">btn-secondary</button>
+				</div>
+			</div>
+		</div>
+         
+         <!-- cards -->
+		<div *ngIf="id===3"  id="b_card" class="text-center" [@moveInLeft]>
+			<h3 class="text-center">Bootstrap Cards</h3>
+			<div class="row">
+				<div class="col-lg-4 col-md-3 col-sm-12">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="../../../assets/images/product.jpg" alt="Card image cap">
+					 <h5 class="card-title">Card title</h5>
+                     <h6 class="card-subtitle mb-2 text-muted">15/26/2</h6>
+						<div class="card-body">
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a  class="btn btn-success" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-3 col-sm-12">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="../../../assets/images/team-3.jpg" alt="Card image cap">
+					<h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">15/26/2</h6>
+						<div class="card-body">
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a  class="btn btn-success" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-3 col-sm-12">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="../../../assets/images/back.jpg" alt="Card image cap">
+					<h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">15/26/2</h6>
+						<div class="card-body">
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a  class="btn btn-success" href="#">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+       <!-- cards -->
+
+        <!-- alerts -->
+
+		<div *ngIf="id===4"  id="b_alert" [@moveInUp]>
+			<h3 class="">Bootstrap Alerts</h3>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+				<h4 class="text-center">Simple Alerts</h4>
+					<div class="alert alert-danger"> alert-danger</div>
+					<div class="alert alert-primary"> alert-primary</div>
+					<div class="alert alert-success"> alert-success</div>
+					<div class="alert alert-info"> alert-info</div>
+					<div class="alert alert-warning"> alert-warning</div>
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-12 item">
+				<h4 class="text-center">Alerts with Link</h4>
+					<div class="alert alert-danger"> alert-danger <a href="#" class="alert-link" >link</a></div>
+					<div class="alert alert-primary"> alert-primary <a href="#" class="alert-link" >link</a></div>
+					<div class="alert alert-success"> alert-success <a href="#" class="alert-link" >link</a></div>
+					<div class="alert alert-info"> alert-info <a href="#" class="alert-link" >link</a></div>
+					<div class="alert alert-warning"> alert-warning <a href="#" class="alert-link" >link</a></div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h4 class="text-center">Alerts with content</h4>
+					<div class="row">
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="alert alert-danger"> 
+							<div class="alert-heading">alert danger</div>
+
+							<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="alert alert-success"> 
+							<div class="alert-heading">alert Success</div>
+
+							<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="alert alert-warning"> 
+							<div class="alert-heading">alert Warning</div>
+
+							<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="alert alert-info"> 
+							<div class="alert-heading">alert info</div>
+
+							<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+		</div>
+
+		<!-- alerts -->
+
+
+		<!-- Lyout -->
+		<div *ngIf="id===5"  id="b_Layout" >
+		 <div class="container" [@moveInRight]>
+		 <h3>Bootstrap4 Layout</h3>
+		 	<div class="row">
+				<div class="col-md-8 item"><strong>.col-md-8</strong></div>
+				<div class="col-md-4 item"><strong>.col-md-4</strong></div>
+
+				<div class="col-md-4 item"><strong>.col-md-4</strong></div>
+				<div class="col-md-4 item"><strong>.col-md-4</strong></div>
+				<div class="col-md-4 item"><strong>.col-md-4</strong></div>
+
+				<div class="col-md-2 item"><strong>.col-md-2</strong></div>
+				<div class="col-md-2 item"><strong>.col-md-2</strong></div>
+				<div class="col-md-3 item"><strong>.col-md-3</strong></div>
+				<div class="col-md-5 item"><strong>.col-md-5</strong></div>
+
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-1 item"><strong>.col-md-1</strong></div>
+				<div class="col-md-4 item"><strong>.col-md-4</strong></div>
+
+				<div class="col-md-10 item"><strong>.col-md-10</strong></div>
+				<div class="col-md-2 item"><strong>.col-md-2</strong></div>
+
+			</div>
+		 </div>
+			
+		</div>
+
+		<!-- Tabs -->
+		<div *ngIf="id===6" class="tabs">
+			<div class="container">
+				<h1 class="text-center">Tabs</h1>
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-12">
+						<div class="tab-content" id="v-pills-tabContent">
+			<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+			 <h3 class="text-center">Home</h3>
+				 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+
+
+			<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+			<h3 class="text-center">Profile</h3>
+
+				 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+
+
+			<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+			<h3 class="text-center">Messages</h3>
+
+				 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+			<h3 class="text-center">Settings</h3>
+
+				 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			</div>
+					</div>
+				</div> 
+			
+			
+			</div>
+		</div>
+	   </div>
+		
+	</div>
+</div>

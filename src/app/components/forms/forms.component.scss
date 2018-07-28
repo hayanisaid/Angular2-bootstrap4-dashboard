@@ -1,0 +1,109 @@
+
+
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+@mixin transition($transition) {
+      -webkit-transition:$transition;
+      -moz-transition:$transition;
+      -ms-transition:$transition;
+      -o-transition:$transition;
+      transition:$transition;
+}
+.box-shadow{
+	@include box-shadow(0 0 20px #ccc);
+}
+
+
+#forms{
+	margin-top: 4em;
+	padding: 2em;
+    margin-bottom: 16em;
+
+	h3{
+		color:$orange;
+		font-family: $Raleway;
+	}
+	form{
+		margin-bottom: 2em;
+		// form class validation
+	   .ng-valid{
+	 	border: 2px solid #2C9E4B;
+
+	     }
+        
+	    
+	    .form-control{
+	    	    font-family: $openSans;
+	    		font-size: 13px;
+	    	&:focus{
+	    		box-shadow: none !important;
+	    		border:1px solid #ccc;
+
+	    	}
+	    } 
+	    .alert_validation{
+	    	padding: 1em;
+	    	span{
+	    		color:#AC0C0C;
+	    		font-family: $openSans;
+	    		font-size: 13px;
+	    	}
+	    }
+
+
+		.input-group-text{
+			background:#3e5151 !important;
+			color:#f4f4f4;
+
+		}
+		.btn-secondary{
+			background: $orange;
+			border:1px solid $orange;
+		}
+		textarea{
+			min-height: 10em;
+		}
+
+
+
+	}
+   
+
+	@media (min-width: 768px) {
+	padding: 2em;
+	form{
+		margin-bottom: 2em;
+	}
+	.form_email{
+		background:#fff;
+		padding: 2em;
+		@include box-shadow(0 0 10px #ccc);
+		.form-control{
+         height: 5em;
+		}
+	}
+	
+		
+	}
+	#datePik{
+		.datepicker__calendar{
+			position: fixed !important;
+		}
+
+		.datepicker__calendar__content{
+			background:red !important;
+		}
+	}
+}

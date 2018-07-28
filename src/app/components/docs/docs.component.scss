@@ -1,0 +1,55 @@
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+      -webkit-box-shadow:$shadow;
+      -moz-box-shadow:$shadow;
+      -ms-box-shadow:$shadow;
+      -o-box-shadow:$shadow;
+      box-shadow:$shadow;
+}
+@mixin transition($transition) {
+      -webkit-transition:$transition;
+      -moz-transition:$transition;
+      -ms-transition:$transition;
+      -o-transition:$transition;
+      transition:$transition;
+}
+
+#docs{
+      padding: 3em;
+
+ 
+         h3{
+            font-family: $Raleway;
+            color:$orange;
+         }
+         p{
+            font-family: $openSans;
+            color:$fontColor;
+         }
+         ul li{
+            font-family: $Raleway;
+            margin-bottom: 1em;
+
+         }
+         .btn-outline-secondary{
+          background:$orange;
+          font-family: $Raleway;
+          color:#fff;
+          border:0;
+         }
+         .blockquote{
+          font-style: italic;
+          font-family: $Raleway;
+          color: $fontColor;
+          border-left: 4px solid $orange;
+          padding: 1em;
+          background:#fff;
+         }
+  
+}

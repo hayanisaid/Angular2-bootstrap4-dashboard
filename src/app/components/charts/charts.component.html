@@ -1,0 +1,70 @@
+
+<!-- chart  -->
+
+<div class="text-center" [@moveInLeft]>
+ 	<div class="row" id="charts">
+    <!-- bar chart  -->
+    <div class="col-md-12 col-lg-5 col-sm-6 col-xs-12 chart" >
+      <h3 class="text-center">Bar chart</h3>
+       <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [colors]="barChartColors"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+            
+    </div>
+    <!-- bar chart -->
+
+ 	    <!-- Doughnut Chart t -->
+ 		<div class="col-md-12 col-lg-5 col-sm-12 chart">
+    <h3 class="text-center">Line Chart</h3>
+ 			 <canvas baseChart
+               [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+ 		</div>
+ 		<!-- Doughnut Chart  -->
+     <!-- line chart -->
+    <div class="col-md-12 col-lg-5 col-xs-12 chart">
+    <h3 class="text-center"> Doughnut Cahrt</h3>
+       <canvas baseChart height="300" 
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              [colors]="donutColors"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <!-- line chart -->
+
+        <!-- Radar chart -->
+    <div class="col-md-12 col-lg-5 col-xs-12 chart">
+    <h3 class="text-center">Radar Chart</h3>
+       <canvas baseChart
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+          
+          (chartHover)="RadarchartHovered($event)"
+          (chartClick)="RadarchartClicked($event)"></canvas>
+    </div>
+    <!-- radar chart -->
+
+
+  
+
+   
+
+
+ 	</div>
+</div>

@@ -1,0 +1,247 @@
+<div class="container-fluid">
+	<div class="row text-center" id="count_statistic" [@moveInLeft]>
+		<div class="col-md-3 col-lg-3 col-sm-12  item ">
+		<span class="badge">5648 </span>
+		<h3>Visitors <i class="large material-icons">persons</i> </h3>
+		</div>
+
+		<div class="col-md-3 col-lg-3 col-sm-12   item ">
+		<span class="badge">74635  </span>
+		<h3>Products <i class="large material-icons">shopping_cart</i></h3>
+		</div>
+
+		<div class="col-md-3 col-lg-3 col-sm-12   item ">
+		<span class="badge">100</span>
+		<h3>Pursache  <i class="large material-icons">local_offer</i></h3>
+		</div>
+
+	</div>
+
+	<!-- Charts -->
+	<div class="row" id="charts" [@moveInDown]>
+	   
+ 	    <!-- Doughnut Chart t -->
+ 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+ 		   <div class="row">
+ 		   <!-- first chart -->
+ 		   	<div class="col-md-12 chart">
+           <canvas baseChart height="200" 
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              [colors]="donutColors"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+ 		   	</div>
+ 		   	<!-- second chart -->
+ 		   	<div class="col-lg-12 col-md-12 col-sm-12 chart">
+			<canvas baseChart
+			[datasets]="barChartData"
+			[labels]="barChartLabels"
+			[colors]   ="barChartColors"
+			[options]="barChartOptions"
+			[legend]="barChartLegend"
+			[chartType]="barChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)">
+				
+			</canvas>
+ 		   	</div>
+ 		   </div>
+ 			
+ 		</div>
+ 		<!-- Doughnut Chart  -->
+ 		<div class="col-lg-6 col-md-12 col-sm-12 box">
+			<div class="row">
+				<div class="col-md-4 col-lg-6 col-sm-12 profile-m">
+				<div class="pic_profile">
+				<img src="../../../assets/images/team-2.jpg" class="img-fluid">
+				 <button class="btn btn-sm btn-default"><i class="material-icons">more_vert</i></button>
+				<div class="round">
+				<div class="round_data text-center">
+				<i class="material-icons">favorite</i>
+				<span>5348</span>
+				</div>
+
+				<div class="round-2 " >
+
+				</div>
+				</div>
+				</div>
+				</div>
+
+				<!-- box chat-->
+				<div class="col-md-6 col-lg-5 col-sm-12 box-C">
+					<div class="chat_header text-center">
+					<h4>Sara <span >online <span class="dot"></span></span></h4>
+
+					</div>
+					<div class="box-body" onscroll="on">
+					<ul class="list-unstyled secondPerson" *ngFor="let SecondeMsg of secPersonMessages">
+					<li><img src="../../../assets/images/team-3.jpg" class="img-fluid float-right"> <p>{{SecondeMsg}}</p>
+					<span class="time float-right">just now ...</span>
+					 </li>
+
+					</ul>
+					<ul class="list-unstyled sPerson" *ngFor="let msg of messages">
+
+					<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> <p>{{msg}}</p>
+                    <span class="time float-left">just now ...</span>
+					</li>
+
+					</ul>
+
+					</div>
+					<div class="box_footer">
+					<div class="row">
+					<div class="col-md-12 col-sm-12">
+					<form #chat='ngForm' (ngSubmit)="sendMessage()" id="formchat">
+					<input type="text" [(ngModel)]="message" ngModel class="form-control" placeholder="Say hello ?" name="name" autocomplete="off">
+					</form>
+
+					</div>
+					<div class="col-md-12 col-sm-12">
+					<ul class="list-unstyled text-center">
+					<li> <i class="material-icons">attach_file</i></li>
+					<li> <i class="material-icons">person_add</i></li>
+					<li> <i class="material-icons">share</i></li>
+
+					</ul>
+					</div>
+					</div>
+
+					</div>
+				</div>
+ 				<!-- box chat -->
+ 				<!-- online active -->
+ 				<div class="col-md-5 chat-box hidden" [@toggle]="chatToggle" *ngIf="chatToggle" [hidden]="windowSize">
+ 				   <div class="box-header" (click)="toggleChat()"  > Chat <i class="material-icons">chat</i>
+                   <i class="material-icons float-right">more_vert</i>
+ 				   </div>
+ 					<ul class="list-unstyled">
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot "></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid">Ahmed Naji <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Jhon Wilyamz <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Ahmed Naji <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Ahmed Naji <span class="dot"></span></li>
+ 					</ul>
+ 				</div>
+ 				<!-- online active -->
+ 			</div>
+
+            
+ 		</div>
+ 	   <!-- button bottom -->
+ 	    <div class="button_option">
+ 	    	<button (click)="moveMenu()"  class="btn btn-default">
+ 	    		<i class="material-icons">add</i>
+ 	    	</button>
+ 	    	<ul class="list-unstyled list-inline" [@toggle]="state">
+ 	    		<li (click)="openModalRight()" class="list-inline-item"><i class="material-icons">person</i></li>
+ 	    		<li class="list-inline-item"><i class="material-icons">cloud</i></li>
+ 	    		<li (click)="toggleChat()" class="list-inline-item"><i class="material-icons">chat</i></li>
+ 	    		<li (click)="openWindowSet()" class="list-inline-item"><i class="material-icons">create</i></li>
+ 	    	</ul>
+ 	    </div>
+ 	   <!-- button bottom -->
+	</div>
+	<!-- Chart -->
+	<!-- map -->
+	<div class="row">
+
+		<div class="col-lg-12 col-md-12 map"  style="overflow: hidden;">
+		<h3 class="text-center">Visitiors around the World</h3>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		 <img src="../../../assets/images/amcharts.pixelMap.png" class="img-fluid pr-2">
+			
+		</div>
+
+		
+	</div>
+	
+	<!-- map -->
+
+
+<!-- 
+ -->
+
+<!-- collapse modal -->
+<div class="collapse_modal" *ngIf="modalState!==off" [@fadeIn]="modalState">
+<span (click)="close_Modal()"><i class="material-icons float-right">close</i></span>
+	<div class="row">
+	<div class="col-lg-9 col-md-9 col-sm-12 right_side"></div>
+	<div class="col-lg-3 col-md-3 col-sm-12 left_side" [@moveInLeft]>
+		<div class="modal_header">
+			<img src="../../../assets/images/team-2.jpg" class="img-fluid">
+		</div>
+		<div class="modal_body">
+		   <div class="social_M">
+		   	<ul class="list-group">
+		   		<li class="list-group-item "><a href="" target="_blank">
+		   		<img src="../../../assets/images/icons/circle-facebook-icon-8301.svg">
+		   		<span class="badge-pill">7612</span></a>
+		   		</li>
+
+		   		<li class="list-group-item "><a href="" target="_blank"><img src="../../../assets/images/icons/circle-pinterest-icon-8341.svg"> <span class="badge-pill">5023</span></a></li>
+
+		   		<li class="list-group-item "><a href="" target="_blank"><img src="../../../assets/images/icons/circle-snapchat-icon-8357.svg"> <span class="badge-pill">9135</span></a></li>
+
+		   		<li class="list-group-item "><a href="" target="_blank"><img src="../../../assets/images/icons/circle-twitter-icon-8381.svg"> <span class="badge-pill">4521</span></a></li>
+		   	</ul>
+		   </div>
+		   <div class="options">
+		   	<ul class="list-unstyled">
+		   		<li><i class="material-icons">create</i>Add new Product</li>
+		   	    <li><i class="material-icons">timeline</i>Statistics</li>
+		   		<li><i class="material-icons">timeline</i>events</li>
+		   		<li><i class="material-icons">cloud</i>Storage</li>
+		   		<li><i class="material-icons">build</i>Setting</li>
+		   		<li><i class="material-icons">power_settings_new</i>logout</li>
+		   	</ul>
+		   </div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- collapse modal -->
+
+<!-- Setting window -->
+<div class="set-window"  *ngIf="windowModalState" [@moveInLeft]>
+	<div class="row">
+		<div class="col-lg-8 col-sm-12 col-md-8">
+			<i class="material-icons large cls float-left" (click)="openWindowSet()">close</i>
+		</div>
+		<div class="col-lg-4 col-sm-12 col-md-4 panel">
+		   <div class="to-do ">
+		   	 <form class="form-inline" #todoForm='ngForm' (ngSubmit)="addTodo(todoForm.value)">
+				<div class="input-group">
+				<input type="text" id="td" class="form-control"
+				placeholder="Add Mission" name="todo" ngModel>
+				<div class="input-group-prepend">
+				<button class="btn btn-outline-secondary"><i class="material-icons">add</i></button>
+				</div>
+
+				</div>
+			</form>
+			<ul class="list-unstyled" >
+					<li *ngFor="let item of TodoArr"><input type="checkbox" class="custom-checkbox" name=""> {{item.todo}} <i (click)="removeTodo(item)" class="material-icons delete">delete</i> </li>
+					
+					
+			</ul>
+		   </div>
+			
+		</div>
+	</div>
+</div>
+<!-- Setting window -->
+</div>	

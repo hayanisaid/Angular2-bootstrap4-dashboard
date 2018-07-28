@@ -1,0 +1,160 @@
+
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+@mixin transition($transition) {
+      -webkit-transition:$transition;
+      -moz-transition:$transition;
+      -ms-transition:$transition;
+      -o-transition:$transition;
+      transition:$transition;
+}
+.box-shadow{
+	@include box-shadow(0 0 20px #ccc);
+}
+#mails{
+	
+	padding: 2em;
+	.header{
+		background: -webkit-linear-gradient(to right, #DECBA4, #3E5151); 
+		background: linear-gradient(to right, #DECBA4, #3E5151);
+		
+
+		img{
+			border-radius: 50%;
+			object-fit:cover;
+			display: block;
+			margin: 1px auto;
+			
+			
+		}
+
+	}// header
+
+	// nav
+	.nav-pills{
+		@extend .box-shadow;
+		background:#fff;
+		margin-top: 1em;
+		.active{
+			background: transparent !important;
+			color: $orange;
+			
+			.nav-link{
+				color: #fff !important;
+			}
+		}
+			.nav-item{
+				padding-bottom: 1em;
+				.nav-link{
+					text-decoration: none !important;
+					color: $fontColor !important;
+					font-family: $Raleway !important;
+					i{
+						color: $orange;
+					}
+					.badge{
+						background: $orange;
+						color: #fff;
+					}
+				}
+			}
+		}
+		// end nav
+
+		// tabcontent
+		#pills-tabContent{
+			// inbox
+			.inbox{
+				margin-top: 1em;
+				.list-group{
+					padding: 1em;
+					background:#fff;
+					li{
+						font-family: $Raleway;
+						color: #666;
+						font-size: 1em;
+						padding:10px;
+						cursor: pointer;
+						border-bottom: 1px solid #888;
+						&:hover{
+							
+							@extend .box-shadow;
+
+						}
+						p{
+							font-family: $openSans;
+							color:$fontColor;
+							font-size: 10px;
+						}
+
+					}
+					
+				}
+				
+
+			}
+			// inbox
+
+			//sent & saved
+			.sent ,.saved,.trash{
+				@extend .inbox;
+			}
+			//sent
+			
+			
+
+
+		}
+		/* tabContent End */
+
+		//Start details Email
+		.details{
+			margin-top: 1em;
+			padding: 1em;
+			background:#fff;
+			.forward{
+				color: $orange;
+				background: #f8f8f8;
+				border-radius: 50%;
+				width: 1.5em;
+				padding: 4px;
+				height: 1.5em;
+				@extend .box-shadow;
+				cursor: pointer;
+			}
+			i{
+			color: $orange;	
+			}
+			.email_from{
+				color: $fontColor;
+				font-family: $openSans;
+			}
+			.title{
+				color: #666;
+				font-family: $Raleway;
+			}
+			p{
+				color: $fontColor;
+				font-family: $openSans;
+			}
+			img{
+				display: block;
+			}
+			.date{
+				color: $fontColor;
+				margin-top: 2em;
+			}
+		}
+}

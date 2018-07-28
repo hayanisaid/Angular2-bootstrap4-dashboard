@@ -1,0 +1,156 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+body{
+	background-color:#f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+.loader{
+	padding: 2.5em 2em;
+	position: relative;
+	
+	overflow: hidden;
+	border-radius: 100%;
+	width: 10em;
+	height: 10em;
+	margin:1em auto;
+	.loading{
+	 width: 5em;
+	height: 5em;
+	// border:2px solid;
+	
+	border-radius: 100%;
+	margin:auto;
+	position: relative;	
+	animation:spin 2s linear infinite;
+    animation-direction: 2s;
+
+
+	}
+	span{
+		
+		
+		border-radius: 50%;
+		position: absolute;
+		
+	    background: $orange;
+	    padding: 0.5em;
+	}
+	span:nth-child(1){
+	 right: 6%;
+    bottom: 62%;
+
+	}
+	span:nth-child(2){
+	 left: 28%;
+    bottom: 79%;
+	}
+	span:nth-child(3){
+	  right: 11%;
+    top: 68%;
+	}
+	span:nth-child(4){
+	 right: 57%;
+    top: 75%;
+	}
+	span:nth-child(5){
+	 right: 79%;
+    top: 36%;	
+	}
+	span:nth-child(6){
+        right: 70%;
+    top: 14%;	
+	}
+	span:nth-child(7){
+	    right: 25%;
+    top: 0%;
+	}
+	span:nth-child(8){
+	     right: 31%;
+    top: 77%;
+	}
+	span:nth-child(9){
+	   right: 1%;
+    top: 44%;
+	}
+	span:nth-child(10){
+	right: 73%;
+    top: 59%;
+	}
+
+	@keyframes spin{
+		0%{
+			transform:rotate(0deg);
+			
+		}
+		100%{
+		 transform:rotate(380deg);	
+		}
+
+	
+
+	}
+}
+.pulse{
+	position: relative !important;
+	
+	&:after{
+	content:"";
+	width: 3em;
+	height: 3em;
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	
+	animation: pulse .6s linear ;
+}
+}
+
+@keyframes pulse{
+	0%,25%,50%,75%,100%{
+		transition-timing-function: cubic-bezier(.4,.14,1,.333);
+		background:rgba(244, 244, 244, 0.6);
+	}
+	0%{
+		transform: scale(1);
+		filter:alpha(opacity=50);
+		opacity: 0.5;
+		background:rgba(244, 244, 244, 0.6);
+	}
+		25%{
+		transform: scale(1.8);
+		filter:alpha(opacity=1);
+		opacity: 1;
+		background:rgba(244, 244, 244, 0.6);
+	}
+		80%{
+		transform: scale(2);
+		filter:alpha(opacity=50);
+		opacity: 0.5;
+		background:rgba(244, 244, 244, 0.6);
+	}
+		100%{
+		transform: scale(2.5);
+		filter:alpha(opacity=1);
+		opacity: 0;
+
+	}
+}

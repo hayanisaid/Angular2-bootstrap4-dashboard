@@ -1,0 +1,142 @@
+<div class="row" style="margin-right: 0">
+    <!-- start navbar -->
+	<div class="col-md-12 col-lg-2 col-sm-12 left_side">
+	<div class="avatar">
+   	<img src="../assets/images/team-2.jpg" class="img-fluid rounded" alt="admin picture">
+   	<span>Welcome Sara</span>
+   </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="home" routerLinkActive="active"> <i class="material-icons">dashboard</i>  Dashbord <span class="sr-only">(current)</span> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="charts" routerLinkActive="active"><i class="material-icons">trending_up</i> Charts </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link " data-toggle="collapse" aria-expanded="false" aria-controls="collapseBootstrap" href="#collapseBootstrap" routerLinkActive="active"><i class="material-icons" >shopping_basket</i>Bootstrap UI </a>
+        <ul class="collapse list-unstyled" id="collapseBootstrap">
+          <li  class="nav-item"><a class="nav-link" routerLink="bootstrap/1" > Modal</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="bootstrap/2" > Buttons</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="bootstrap/3"> Cards</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="bootstrap/4"> Alerts</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="bootstrap/5"> Layout</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="bootstrap/6"> Tabs</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="mail" routerLinkActive="active"><span class="badge">20</span> <i class="material-icons">email</i> Inbox </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="chat" routerLinkActive="active"><span class="badge">7</span><i class="material-icons">chat</i>  Chat  </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link "  data-toggle="collapse" aria-expanded="false" aria-controls="collapseForms" href="#collapseForms"  routerLinkActive="active"><i class="material-icons">forum</i>Forms </a>
+        <ul id="collapseForms" class="collapse list-unstyled">
+         <li class="nav-item"><a class="nav-link" routerLink="forms/1" routerLinkActive="active" >Forms</a></li>
+        
+        </ul>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link " routerLink="notification" routerLinkActive="active"><i class="material-icons">notifications_none</i> Notifications </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="tables" routerLinkActive="active"><i class="material-icons">list</i> Tables </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="docs" routerLinkActive="active"><i class="material-icons">library_books</i>Docs</a>
+      </li>
+    
+      
+    </ul>
+   
+  </div>
+</nav>
+	</div>
+	<!-- end navbar -->
+	<!-- right side -->
+	<div class="col-md-12 col-lg-10 col-xs-12 " id="right_side">
+	 <div class="">
+	   <div id="navbar_top">
+	   	<div class="row">
+	 		<div class="col-lg-6 col-md-12 col-sm-12">
+				<form  class="form-inline my-2 my-lg-0 float-right">
+         <div class="input-group">
+         <input id="searchInput" class="form-control mr-sm-2" type="search" [class.red]="focusState"  (focus)="focusfunc()" placeholder="Search" aria-label="Search"  >
+           <div class="input-group-append">
+             <span class="input-group-text"><i class="material-icons">search</i></span>
+           </div>
+         </div>
+				
+      </form>
+	 		</div>
+	 		<div class=" col-lg-6 col-md-12 col-sm-12">
+	 		   <div class="float-right notifi">
+	 		    <ul class="list-unstyled inline">
+					<li  (click)="openDrowChat()"><i class="material-icons">chat</i> <span class="badge">7</span> 
+            <!-- dropdown Menu -->
+            <div class="drop_d_Menu_Msg" [@toggle]="stateChat">
+             <ul>
+               <li><img src="assets/images/team-2.jpg" class="img-fluid"> Sara </li>
+            <li><img src="assets/images/team-3.jpg" class="img-fluid">Hi how are you? <span class="dot"></span></li>
+            <li><img src="assets/images/team-2.jpg" class="img-fluid">I'm going to NYC <span class="dot"></span></li>
+            <li><img src="assets/images/team-3.jpg" class="img-fluid"> Jhon Wilyamz <span class="dot"></span></li>
+            <li><img src="assets/images/team-2.jpg" class="img-fluid"> I would to Know abou.. <span class="dot"></span></li>
+            <li><img src="assets/images/team-3.jpg" class="img-fluid"> I have problem .. <span class="dot"></span></li>
+             </ul>
+           </div>
+            <!-- DropDown Menu -->
+
+          </li>
+					<li (click)="DropNew()" ><i class="material-icons">notifications_none</i> <span class="badge">20</span> 
+           <!-- dropdown Menu -->
+            <div class="drop_d_Menu_new" [@toggle]="newState">
+             <ul>
+               <li><img src="assets/images/team-2.jpg" class="img-fluid"><strong>Sara</strong>  comment new Article <i class="tiny material-icons">announcement</i> </li>
+            <li><img src="assets/images/team-3.jpg" class="img-fluid"><strong>Ahmed</strong>  Create new Account <i class="tiny material-icons">account_circle</i> </li>
+            <li><img src="assets/images/team-2.jpg" class="img-fluid"><strong>New Email</strong> <i class="tiny material-icons">email</i> </li>
+            <li><img src="assets/images/team-2.jpg" class="img-fluid"><strong>Sara</strong>  comment new Article <i class="tiny material-icons">announcement</i> </li>
+            <li><img src="assets/images/team-3.jpg" class="img-fluid"><strong>Ahmed</strong>  Create new Account <i class="tiny material-icons">account_circle</i> </li>
+            <li><img src="assets/images/team-2.jpg" class="img-fluid"><strong>New Email</strong> <i class="tiny material-icons">email</i> </li>             </ul>
+           </div>
+            <!-- DropDown Menu --> 
+         
+          </li>
+					<li [class.pulse]="pulse" (click)="pulseEffect()" (click)="showSetting()"><i class="material-icons">more_vert</i>
+           <div class="drop_d_Menu_profile" [@toggle]="ProfileState">
+             <ul>
+                <li> Profile <i class="material-icons">persons</i> </li>
+                <li> Settings <i class="material-icons">settings</i> </li>
+                <li> Logout <i class="material-icons">power_settings_new</i> </li>
+              </ul>
+           </div>
+            <!-- DropDown Menu --> 
+          
+          </li>
+	 		    </ul>
+				
+	 		   </div>
+	 			
+	 		</div>
+	 	</div>
+	   </div>
+	 	<div class="main_center">
+     <div class="">
+       <router-outlet></router-outlet>
+     </div>
+	 		
+	 	</div>
+	 </div>
+	
+	</div>
+	<!-- right side -->
+</div>

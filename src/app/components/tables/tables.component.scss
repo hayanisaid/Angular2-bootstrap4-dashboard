@@ -1,0 +1,51 @@
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+
+#tables{
+	padding: 1em;
+	.table_item{
+		overflow: hidden;
+		margin-bottom:2em;
+		background: #fff;
+		h3{
+			font-family: $Raleway;
+			color: $orange;
+
+		}
+		td ,thead,tr{
+         font-family: $Raleway;
+         color: #666;
+		}
+	}
+	.filter-Table-options{
+		justify-content: flex-shrink;
+		button,.input-group-text{
+			background: $orange;
+			color:#fff;
+			border:0;
+		}
+		.form-control-sm{
+			font-family: $Raleway;
+			color:$fontColor;
+		}
+		.form-check-label{
+			font-family: $Raleway;
+			color: $fontColor;
+		}
+		.custom-checkbox{
+			backgound:$orange;
+		}
+	}
+}

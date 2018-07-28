@@ -1,0 +1,172 @@
+// import google fonts
+
+$mainColor:#f8f8f8;
+$fontColor:#888;
+$Raleway:"Raleway";
+$openSans:"Open Sans";
+$orange:#F97300;
+
+/* box shadow mixin */
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	box-shadow:$shadow;
+}
+@mixin transition($transition) {
+      -webkit-transition:$transition;
+      -moz-transition:$transition;
+      -ms-transition:$transition;
+      -o-transition:$transition;
+      transition:$transition;
+}
+.box-shadow{
+	@include box-shadow(0 0 20px #ccc);
+}
+
+#boots{ 
+	display: block;
+	padding: 4em;
+	min-height: 100em;
+	h3{
+		font-family: $Raleway;
+		color:$orange;
+		margin-bottom: 2em;
+	}
+	#b_modal{
+		background: #fff;
+		padding: 2em;	
+		button{
+		font-family: $Raleway;
+		@media (max-width: 768px) {
+     		margin-bottom: 1em;	
+     		}
+		
+		}
+     .modal-image{
+     	button{
+     		position: absolute;
+     		background: #fff;
+     		font-family: $Raleway;
+     		
+     	}
+
+     	.modal-body{
+     		padding: 0 !important;
+     	}
+     }
+
+     //
+     .modal{
+     	.modal-title{
+     		color:$orange;
+     		font-family: $Raleway;
+     	}
+     }
+	}
+
+	// buttons style 
+
+	#b_buttons{
+		h4{
+			color: $orange;
+			font-family: $Raleway;
+		}
+     button{
+     	margin: 1em;
+     	font-family: $openSans;
+     }
+     .item{
+     	background:#fff;
+     	margin-bottom: 1em;
+     }
+	}
+
+	// cards style
+	#b_card{
+
+
+		.card{
+			@include box-shadow(0 0 10px #ccc);
+			@media (max-width: 768px) {
+				margin-bottom: 1em;
+			}
+			.card-title{
+				color: $orange;
+				font-family: $Raleway;
+			}
+			.card-body{
+				.card-text{
+					color:$fontColor;
+					font-family: $openSans;
+				}
+			}
+		}
+	}
+
+
+	/// alert style 
+
+	#b_alert{
+		h4{
+			color:$orange;
+			font-family: $Raleway;
+		}
+		.alert{
+			p{
+				font-family: $openSans;
+			}
+		}
+	}
+	#b_Layout{
+		h3{
+			color:$orange;
+			font-family: $Raleway; 
+		}
+		.item{
+			margin-bottom: 2em;
+            background:#fff;
+            border:1px solid #ccc;
+            padding: 1em;
+
+            strong{
+            	color:$orange;
+            }
+		}
+	}
+}
+
+/* Tabs Styles */
+.tabs{
+  h1{
+  color:$orange;
+  font-family: $Raleway;	
+  }
+  .nav{
+    background:#3e5151;
+    min-height: 15em;
+    a{
+     color: #f4f4f4;
+     padding-bottom: 1em;
+     font-family: $Raleway;	
+    }
+    .active{
+    	background:$orange;
+    }
+    
+  }
+  .tab-content{
+  	background:#fff;
+  	padding: 1em;
+    margin-left: -30px;
+    h3{
+    	color:$orange;
+    	font-family: $Raleway;
+    }
+    p{
+    	color:$fontColor;
+    	font-family: $openSans;
+    }
+  }
+}

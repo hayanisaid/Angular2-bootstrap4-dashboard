@@ -1,0 +1,21 @@
+ 
+
+  <!-- notification -->
+
+   <div class="notification">
+   	<div class="container">
+   		<div class="text-center">
+   		<h3>Notification</h3>
+   			<button class="btn btn-lg btn-default"  (click)="notifRight()">Notification from right</button>
+   			<button class="btn btn-lg btn-default" (click)="notifLeft()">Notification from Left</button>
+   			<button class="btn btn-lg btn-default" (click)="notifTop()">Notification from Top</button>
+   			<button class="btn btn-lg btn-default" (click)="notifBottom()">Notification from Bottom</button>
+   			<div class="notification-inner">
+   				<div class="item right" *ngIf="right" [@moveInRight]="right"><p>Notification from right</p></div>
+   				<div class="item left" *ngIf="left" [@notifyLeft]="left"><p>Notification from Left</p></div>
+   				<div class="item top" *ngIf="top" [@notifyTop]="top"><p>Notification from Top</p></div>
+   				<div class="item bottom" *ngIf="bottom" [@notifyBottom]="bottom"><p>Notification from Bottom</p></div>
+   			</div>
+   		</div>
+   	</div>
+   </div>

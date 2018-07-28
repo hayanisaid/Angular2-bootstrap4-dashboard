@@ -1,0 +1,55 @@
+<!-- box chat layout start -->
+
+<div class="row" id="chat" [@moveInDown]>
+	<div class="col-md-12 col-lg-8 col-sm-12 box">
+		<div class="chat_header text-center">
+			<h4>Sara <span >online <span class="dot"></span></span></h4>
+			 
+		</div>
+		<div class="box-body" onscroll="on">
+		<ul class="list-unstyled secondPerson" *ngFor="let SecondeMsg of secPersonMessages">
+					<li><img src="../../../assets/images/team-3.jpg" class="img-fluid float-right"> <p>{{SecondeMsg}}</p> </li>
+				  </ul>
+				<ul class="list-unstyled" *ngFor="let msg of messages">
+
+					<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> <p>{{msg}}</p></li>
+					
+				</ul>
+				
+			</div>
+			<div class="box_footer">
+			   <div class="row">
+			   	<div class="col-md-8 col-sm-12">
+			   	   <form #chat='ngForm' (ngSubmit)="sendMessage()" id="formchat">
+			   	   	<input type="text" [(ngModel)]="message" ngModel class="form-control" placeholder="Say hello ?" name="name" autocomplete="off">
+			   	   </form>
+			   		
+			   	</div>
+			   	<div class="col-md-3 col-sm-12">
+			   		<ul class="list-unstyled float-right">
+			   			<li> <i class="material-icons">attach_file</i></li>
+			   			<li> <i class="material-icons">person_add</i></li>
+			   			 <li> <i class="material-icons">share</i></li>
+			   			
+			   		</ul>
+			   	</div>
+			   </div>
+				
+			</div>
+	</div>
+	<div class="col-md-3 offset-1 chat-box" [@moveInLeft]>
+ 				   <div class="box-header" > Chat <i class="material-icons">chat</i>
+                  <i class="material-icons float-right text-white">more_vert</i>
+ 				   </div>
+ 					<ul class="list-unstyled">
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot "></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid">Ahmed Naji <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Jhon Wilyamz <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Ahmed Naji <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-2.jpg" class="img-fluid"> Sara linda <span class="dot"></span></li>
+ 						<li><img src="../../../assets/images/team-3.jpg" class="img-fluid"> Ahmed Naji <span class="dot"></span></li>
+ 					</ul>
+ 				</div>
+</div>
